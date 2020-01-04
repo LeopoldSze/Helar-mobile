@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <link rel="stylesheet" href="../less/docMain.css">
+    <title>医生简介</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href="home.html"><img src="../imgs/index2/backbutton.png" alt="" id="back">医生资料<i class="fa fa-heart-o"></i></a>
+        </header>
+        <div class="mainInfo"></div>
+        <!--新建模板-->
+        <script id="mainInfo" type="text/x-jquery-tmpl">
+            <div class="cont">
+                <a href="javascript:"><img src="../imgs/doctor/call.png" alt=""></a>
+                <img src="${photo}" alt="">
+                <a href="javascript:"><img src="../imgs/doctor/chat.png" alt=""></a>
+            </div>
+            <div class="info">
+                <h4>${name}</h4>
+                <p>${kind}</p>
+                <p><i class="fa fa-star-o"></i><span class="score">${score}</span>(234条评价)</p>
+            </div>
+            <a href="docApo.html"><button type="button" id="apo">预约挂号</button></a>
+        </script>
+        <div class="detail">
+            <ul>
+                <li><img src="../imgs/doctor/a1.png" alt=""><a href="docInfo.html">个人信息</a><i class="fa fa-angle-right"></i></li>
+                <li><img src="../imgs/doctor/a2.png" alt=""><a href="docAddress.html">工作地址</a><i class="fa fa-angle-right"></i></li>
+                <li><img src="../imgs/doctor/a3.png" alt=""><a href="docReview.html">评价</a><i class="fa fa-angle-right"></i></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+<script src="../js/docMain.js"></script>
+</html>

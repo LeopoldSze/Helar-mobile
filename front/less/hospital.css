@@ -1,0 +1,109 @@
+@import "css/comm.css";
+.main {
+  width: 20rem;
+  position: relative;
+}
+.main a {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 3.33333333rem;
+  padding-top: 1.6rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  box-shadow: 0px 20px 20px #ddd;
+  text-align: left;
+  color: #fff;
+}
+.main a img {
+  width: 1.30666667rem;
+  height: 0.82666667rem;
+  margin-left: 5%;
+  margin-right: 5.73333333rem;
+}
+.main h4 {
+  font-size: 1.6rem;
+  color: #969696;
+  position: absolute;
+  top: 7.46666667rem;
+  width: 100%;
+  padding-left: 1.73333333rem;
+}
+.main ul {
+  position: absolute;
+  top: 15.06666667rem;
+}
+.main ul li {
+  width: 17.2rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  margin-left: 1.46666667rem;
+  margin-bottom: 1.46666667rem;
+  padding-left: 1.06666667rem;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  color: #969696;
+  font-size: 0.8rem;
+  position: relative;
+}
+.main ul li:nth-of-type(3) img {
+  margin-left: 12.4rem;
+}
+.main ul li:nth-of-type(4) img {
+  margin-left: 12.4rem;
+}
+.main ul li:nth-of-type(4) .sel {
+  height: 3.73333333rem;
+}
+.main ul li img {
+  margin-left: 10.66666667rem;
+  width: 0.96rem;
+  height: 0.50666667rem;
+}
+.main ul li .sel {
+  width: 98%;
+  height: 9.06666667rem;
+  overflow-y: auto;
+  position: absolute;
+  top: 2.53333333rem;
+  left: 1%;
+  display: none;
+  background: #333333;
+  opacity: 0.8;
+}
+.main ul li .sel span {
+  display: block;
+  width: 100%;
+  height: 1.86666667rem;
+  line-height: 1.86666667rem;
+  text-align: center;
+  border-top: 1px dotted #ccc;
+  border-bottom: 1px dotted #ccc;
+  border-left: 1px dotted #ccc;
+  border-right: 1px dotted #ccc;
+}
+.main ul li .sel span:first-of-type {
+  border-top: 1px dotted #ccc;
+}
+.main ul li .sel span:hover {
+  background: #ddd;
+  color: #333333;
+}
+.main ul li .sel.on {
+  display: block;
+  z-index: 2;
+}
+.main #btn {
+  width: 17.2rem;
+  height: 2.4rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  color: #fff;
+  font-size: 0.96rem;
+  position: absolute;
+  top: 31.73333333rem;
+  left: 1.46666667rem;
+  border-radius: 50px;
+  border: none;
+  margin-bottom: 2.66666667rem;
+}
+/*# sourceMappingURL=hospital.css.map */

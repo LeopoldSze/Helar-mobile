@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <script src="../layer-v3.1.1/layer/layer.js"></script>
+    <link rel="stylesheet" href="../less/result.css">
+    <title>找到</title>
+</head>
+<body>
+    <div class="main">
+        <a href="home.html" class="back"><img src="../imgs/index2/backbutton.png" alt="" id="back">找到</a>
+        <!--主体-->
+        <div class="docInfo">
+            <ul class="recList clearFix"></ul>
+            <!--新建模板-->
+            <script id="docList" type="text/x-jquery-tmpl">
+				<li class="doc">
+                    <a href="docMain.html"><img src="${photo}" alt=""></a>
+                    <div class="info">
+                        <input type="hidden" id="${id}" class="num">
+                        <h4>${name}</h4>
+                        <p>${kind}</p>
+                        <p><i class="fa fa-map-marker"></i>&nbsp;<span>0.8km</span></p>
+                        <span class="score"><i class="fa fa-star-o"></i>&nbsp;${score}</span>
+                        <i class="fa fa-ellipsis-v"></i>
+                    </div>
+                </li>
+			</script>
+            <script id="hosList" type="text/x-jquery-tmpl">
+				<li class="hos">
+                    <img src="${photo}" alt="" />
+                    <div class="info">
+                        <h4>${name}</h4>
+                        <p>${kind}</p>
+                        <p><i class="fa fa-map-marker"></i>&nbsp;<span>0.8km</span></p>
+                        <span class="score"><i class="fa fa-star-o"></i>&nbsp;${score}</span>
+                        <i class="fa fa-ellipsis-v"></i>
+                    </div>
+                </li>
+			</script>
+        </div>
+
+    </div>
+</body>
+<script src="../js/result.js"></script>
+</html>

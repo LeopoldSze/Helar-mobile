@@ -1,0 +1,23 @@
+@import "css/comm.css";
+.com .com__nav {
+  width: 5.33333333rem;
+}
+.com .com__nav .com__nav-list .com__nav-item {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.com .com__nav .com__nav-list .com__nav-item:first-of-type {
+  height: 8rem;
+}
+.com .com__nav .com__nav-list .com__nav-item .com__nav-link {
+  text-align: right;
+}
+.com .com__nav .com__nav-list .com__nav-item:hover .com__nav-link {
+  background: #eee;
+  border-right: 5px solid #546fec;
+}
+.com .com__content {
+  padding: 0rem;
+  background: transparent;
+}
+/*# sourceMappingURL=index.css.map */

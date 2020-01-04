@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/scale.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=65291bd99a9c8e4fbf21977303e0fbaa"></script>
+    <link rel="stylesheet" href="../less/docAddress.css">
+    <title>地图</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href="docMain.html"><img src="../imgs/index2/backbutton.png" alt="" id="back">地图<i class="fa fa-search"></i></a>
+        </header>
+        <!--导航地图-->
+        <div id="container" class="map"></div>
+        <div id="info">
+            <h4 id='status'></h4><hr>
+            <p id='result'></p><hr>
+        </div>
+        <div id="panel"></div>
+
+        <!--医生列表-->
+        <div class="list">
+            <ul class="doctors clearFix" id="doctors"></ul>
+            <!--新建模板-->
+            <script id="docLists" type="text/x-jquery-tmpl">
+                <li>
+                    <input type="hidden" id="${id}" >
+                    <p><i class="fa fa-star-o"></i>${score}</p>
+                    <img src="${photo}" alt="">
+                    <h3>${name}医生</h3>
+                    <P>${kind}</P>
+                    <a href=""><i class="fa fa-phone"></i></a>
+                    <a href=""><i class="fa fa-commenting-o"></i></a>
+                </li>
+            </script>
+            <div class="location">
+                <a href="javascript:" id="loc"><i class="fa fa-map-marker"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function getSc(obj1,obj2){
+        let ulObj = $(obj1);
+        let listObj = ulObj.find("li");
+        let totalWidth = 0;
+        listObj.each((index,value)=>{
+            totalWidth += $(value).outerWidth(true);
+        });
+        ulObj.width(totalWidth);
+        var myScroll = new IScroll(obj2,{
+            scrollX:true,
+            scrollY:false
+        });
+    }
+    window.onload = function(){
+        getSc(".doctors",".list");
+    };
+    $(function () {
+        // 加载医生信息
+        $.ajax({
+            type:"get",
+            url:"http://localhost:3000/doctor/list",
+            async:true,
+            success:function(data){
+                // console.log("data"+JSON.stringify(data));
+                for(let i = 0; i<data.data.length;i++){
+                    $("#docLists").tmpl(data.data[i]).appendTo(".doctors");
+                }
+            }
+        });
+
+    });
+
+    $(window).resize(function () {
+        getSc(".doctors",".list");
+    });
+
+
+// 地图
+    //定义初始经纬度
+    let mylgt = "118.796623";
+    let mylat = "32.059352";
+
+    // 地图加载
+    let map = new AMap.Map('container',{
+        zoom: 10,
+        center: [mylgt,mylat],
+        mapStyle: 'light',
+    });
+
+    //定义位置标记
+    let lnglats = [
+        [118.784304,32.01711],
+        [118.786881,31.997828],
+        [118.773663,32.040929],
+        [118.775028,32.001268],
+        [118.755215,32.022605],
+        [118.796314,32.013635],
+        [118.794692,32.034718],
+        [118.776822,32.040086]
+    ];
+
+    // 添加位置标记及信息窗
+    let infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});
+    for (let i = 0, marker; i < lnglats.length; i++) {
+        let marker = new AMap.Marker({
+            position: lnglats[i],
+            map: map
+        });
+        marker.content  = '<h4>我是第' + (i + 1) + '个医生的位置</h4>';
+        marker.content += '<h6>经度：'+lnglats[i][0]+'</h6>';
+        marker.content += '<h6>纬度：'+lnglats[i][1]+'</h6>';
+        marker.on('mouseover', infoOpen);
+        //注释后打开地图时默认关闭信息窗体
+        marker.on('mouseout', infoClose);
+        marker.on('click', newMAp);
+    }
+    map.setFitView();
+
+    //鼠标点击事件,设置地图中心点及放大显示级别
+    function newMAp(e) {
+        map.setZoomAndCenter(12, e.target.getPosition());
+
+        let infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(map, e.target.getPosition());
+    }
+
+    function infoClose(e) {
+        infoWindow.close(map, e.target.getPosition());
+    }
+    function infoOpen(e) {
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(map, e.target.getPosition());
+    }
+
+    // 添加插件
+    AMap.plugin(['AMap.ToolBar', 'AMap.Scale', 'AMap.MapType'], function() {
+        toolBar = new AMap.ToolBar();  //工具条
+        scale = new AMap.Scale();    //比例尺
+        mapType = new AMap.MapType();   //地图种类
+        map.addControl(toolBar);
+        map.addControl(scale);
+        map.addControl(mapType);
+    });
+
+    // 点击定位
+    let i = 0;
+    $("#loc").click(()=>{
+        i++;
+        if(i % 2 === 0){
+            $("#info").slideUp(300);
+        }else{
+            $("#info").slideDown(300);
+            AMap.plugin('AMap.Geolocation', function() {
+                let geolocation = new AMap.Geolocation({
+                    enableHighAccuracy: true,//是否使用高精度定位，默认:true
+                    timeout: 10000,          //超过10秒后停止定位，默认：5s
+                    buttonPosition:'RB',    //定位按钮的停靠位置
+                    buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+                    zoomToAccuracy: false,   //定位成功后是否自动调整地图视野到定位点
+
+                });
+                map.addControl(geolocation);
+                geolocation.getCurrentPosition(function(status,result){
+                    if(status=='complete'){
+                        onComplete(result)
+                    }else{
+                        onError(result)
+                    }
+                });
+            });
+            //解析定位结果
+            function onComplete(data) {
+                document.getElementById('status').innerHTML='定位成功';
+                let str = [];
+                str.push('定位结果：' + data.position);
+                str.push('定位类别：' + data.location_type);
+                if(data.accuracy){
+                    str.push('精度：' + data.accuracy + ' 米');
+                }//如为IP精确定位结果则没有精度信息
+                str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+                document.getElementById('result').innerHTML = str.join('<br>');
+            }
+            //解析定位错误信息
+            function onError(data) {
+                document.getElementById('status').innerHTML='定位失败';
+                document.getElementById('result').innerHTML = '失败原因排查信息:'+data.message;
+            }
+        }
+    });
+
+
+    // 实例化点标记
+    function addMarker(num) {
+        marker = new AMap.Marker({
+            icon: "http://webapi.amap.com/theme/v1.3/markers/b/mark_rs.png",
+            position: lnglats[num],
+            offset: new AMap.Pixel(-13, -30)
+        });
+        marker.setMap(map);
+    }
+    // 清除 marker
+    function clearMarker() {
+        if ($(".amap-marker .amap-icon")) {
+            $(".amap-marker").css("display","none");
+        }
+    }
+    //点击显示医生位置
+    $("#doctors").on("click","li",function () {
+        $(this).css("background","#666").siblings().css("background","#fff");
+        let num = $(this).find("input").prop("id");
+        console.log("num:"+num);
+        clearMarker();
+        addMarker(num-1);
+    });
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <link rel="stylesheet" href="../less/drugShop.css">
+    <title>药品商店</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href="listDrug.html">
+                <img src="../imgs/index2/backbutton.png" alt="" id="back">药品商店
+                <i class="fa fa-search"></i>
+                <i class="fa fa-shopping-bag"></i>
+            </a>
+        </header>
+        <div class="lists">
+            <ul class="case clearFix">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>O</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>U</li>
+                <li>V</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+            </ul>
+        </div>
+        <div class="drugs">
+            <ul id="ulist"></ul>
+            <ul id="ulist1"></ul>
+            <!--新建模板-->
+            <script id="docList" type="text/x-jquery-tmpl">
+                <li class="docList">
+                    <input type="hidden" id="${id}" >
+                    <img src="${photo}" alt=""/>
+                    <h4>${name}</h4>
+                    <p>￥${price}</p>
+                </li>
+            </script>
+        </div>
+    </div>
+</body>
+<script src="../js/drugShop.js"></script>
+</html>

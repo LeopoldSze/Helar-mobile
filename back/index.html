@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <title>主页</title>
+</head>
+<body>
+<div class="container-fluid container-fluid2">
+    <!--导航条-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Movies Pro
+
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                    </div>
+                    <a href="#"><i class="fa fa-search"></i></a>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="icons"><a href="#"><i class="fa fa-tasks"><span class="badge">3</span></i></a></li>
+                    <li class="icons"><a href="#"><i class="fa fa-envelope"><span class="badge">2</span></i></a></li>
+                    <li class="icons"><a href="#"><i class="fa fa-bell"><span class="badge">8</span></i></a></li>
+                    <li class="dropdown" id="loginArea">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="userarea">请登录</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <i class="fa fa-circle" style="color: #CE959B"></i>
+                                <i class="fa fa-circle" style="color: #E5B867"></i>
+                                <i class="fa fa-circle" style="color: #6B7181"></i>
+                                <i class="fa fa-circle" style="color: #79868F"></i>
+                                <i class="fa fa-circle" style="color: #AEBBCC"></i>
+                            </li>
+                            <li><a href="#">个人中心&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></a></li>
+                            <li><a href="#" id="exit">退出登录&nbsp;&nbsp;<span class="glyphicon glyphicon-off"></a></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!--侧边栏-->
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        导航
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">用户</a></li>
+                        <li><a href="#">药品</a></li>
+                        <li><a href="#">医生</a></li>
+                        <li><a href="#">医院</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        统计
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">数据统计</a></li>
+                        <li><a href="#">统计管理</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                       设置
+                        <i class="fa fa-angle-double-down"></i>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">设置</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--轮播图-->
+    <!-- 16:9 aspect ratio -->
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="home.html"></iframe>
+    </div>
+
+</div>
+</body>
+<script src="js/index.js"></script>
+</html>

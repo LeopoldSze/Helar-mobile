@@ -1,0 +1,42 @@
+.tangleLeft{
+	width: 0px;
+	height: 0px;
+	border-right: 30px solid #fff;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	float: left;
+}
+.tangleRight{
+	width: 0px;
+	height: 0px;
+	border-left: 30px solid #fff;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	float: left;
+}
+.tangleUp{
+	width: 0px;
+	height: 0px;
+	border-right: 20px solid transparent;
+	border-left: 20px solid transparent;
+	border-bottom: 30px solid #fff;
+	float: left;
+}
+.m-cake4{
+	margin-bottom: 70px;
+}
+.m-cake4 div .LocationLeft{
+	position: absolute;
+	top: 90px;
+	left: 204px;
+}
+.m-cake4 div .LocationRight{
+	position: absolute;
+	top: 90px;
+	left: 0px;
+}
+.m-cake4 div .LocationMiddle{
+	position: absolute;
+	top: 190px;
+	left: 90px;
+}

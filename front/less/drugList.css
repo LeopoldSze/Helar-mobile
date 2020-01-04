@@ -1,0 +1,84 @@
+@import "css/comm.css";
+.main {
+  width: 20rem;
+  position: relative;
+  background: #eee;
+  padding-bottom: 2.13333333rem;
+}
+.main header {
+  position: relative;
+  width: 100%;
+  height: 3.33333333rem;
+}
+.main header a {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 3.33333333rem;
+  padding-top: 1.6rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  box-shadow: 0px 20px 20px #ddd;
+  text-align: left;
+  color: #fff;
+}
+.main header a img {
+  width: 1.30666667rem;
+  height: 0.82666667rem;
+  margin-left: 5%;
+  margin-right: 5.73333333rem;
+}
+.main header a i {
+  margin-left: 5.86666667rem;
+}
+.main ul {
+  position: relative;
+  top: 1.6rem;
+}
+.main ul li {
+  width: 18.13333333rem;
+  height: 3.33333333rem;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 1.06666667rem;
+  box-shadow: 0.21333333rem 0.26666667rem 0.21333333rem #B4B9CF;
+  margin-left: 0.93333333rem;
+  position: relative;
+}
+.main ul li:last-of-type {
+  margin-bottom: 2rem;
+}
+.main ul li img {
+  width: 2.21333333rem;
+  height: 1.28rem;
+  margin-top: 1.06666667rem;
+  margin-left: 0.93333333rem;
+  padding-right: 0.93333333rem;
+  border-right: 1px solid #ccc;
+}
+.main ul li a {
+  position: absolute;
+  top: 1.06666667rem;
+  left: 4.53333333rem;
+  font-size: 0.90666667rem;
+  color: #969696;
+}
+.main ul li i {
+  font-size: 1.86666667rem;
+  margin-left: 12.8rem;
+}
+.main .add {
+  position: fixed;
+  top: 80%;
+  right: 5%;
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  text-align: center;
+  border-radius: 50%;
+  background: #546fec;
+  opacity: 0.8;
+  color: #fff;
+  font-size: 2.66666667rem;
+}
+/*# sourceMappingURL=drugList.css.map */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <link rel="stylesheet" href="../less/menu.css">
+    <link rel="stylesheet" href="../less/profile.css">
+    <title>个人中心</title>
+</head>
+<body>
+    <div class="main">
+        <!--顶部-->
+        <header>
+            <i class="fa fa-bars" id="menu"></i>
+            <h4>个人中心</h4>
+            <i class="fa fa-cog" id="set"></i>
+        </header>
+
+        <!--侧边栏-->
+        <div class="menu">
+            <div class="userArea"></div>
+            <!--新建模板-->
+            <script id="usrInfo" type="text/x-jquery-tmpl">
+                <img src="${photo}" alt=""/>
+                <h4>${acc}</h4>
+            </script>
+            <ul>
+                <li><a href="home.html">首页</a></li>
+                <li><a href="listDrug.html">药物</a></li>
+                <li><a href="listDoc.html">医生</a></li>
+                <li><a href="services.html">服务</a></li>
+                <li><a href="profile.html">个人中心</a></li>
+                <li><a href="newsDetail.html">健康资讯</a></li>
+                <li><a href="javascript:;" id="exit">退出登录</a></li>
+            </ul>
+        </div>
+
+        <!--姓名-->
+        <div class="nameArea"></div>
+        <!--新建模板1-->
+        <script id="list1" type="text/x-jquery-tmpl">
+            <img src="${photo}" alt=""/>
+            <h4>${acc}</h4>
+        </script>
+        <!--信息-->
+        <div class="bodyInfo">
+            <ul id="bodyInfo"></ul>
+            <!--新建模板2-->
+            <script id="list2" type="text/x-jquery-tmpl">
+                <li>
+                    <span>年龄</span>
+                    <p>${age}<span>岁</span></p>
+                </li>
+                <li>
+                    <span>血型</span>
+                    <p>${blood}</p>
+                </li>
+                <li>
+                    <span>性别</span>
+                    <p>${gender}</p>
+                </li>
+                <li>
+                    <span>身高</span>
+                    <p>${height}<span>cm</span></p>
+                </li>
+                <li>
+                    <span>体重</span>
+                    <p>${weight}<span>kg</span></p>
+                </li>
+                <li>
+                    <span>目标</span>
+                    <p>78<span>%</span></p>
+                </li>
+            </script>
+        </div>
+
+        <!--设置-->
+        <div class="setting">
+            <ul>
+                <li><img src="../imgs/index2/target.png" alt=""><a href="">目标设置</a><i class="fa fa-angle-right"></i></li>
+                <li><img src="../imgs/index2/like.png" alt=""><a href="">收藏</a><i class="fa fa-angle-right"></i></li>
+                <li><img src="../imgs/index2/ensurence.png" alt=""><a href="">保险</a><i class="fa fa-angle-right"></i></li>
+            </ul>
+        </div>
+
+        <!--底部-->
+        <footer>
+            <a href="listDrug.html"><img src="../imgs/index/drugs.png" alt=""></a>
+            <a href="listDoc.html"><img src="../imgs/index/doctor.png" alt=""></a>
+            <a href="home.html"><img src="../imgs/index/stethoscope.png" alt=""></a>
+            <a href="listHos.html"><img src="../imgs/index/Shape.png" alt=""></a>
+            <a href="profile.html"><img src="../imgs/index2/f4.png" alt=""></a>
+        </footer>
+    </div>
+</body>
+<script src="../js/profile.js"></script>
+<script src="../js/menu.js"></script>
+</html>

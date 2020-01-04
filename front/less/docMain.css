@@ -1,0 +1,133 @@
+@import "css/comm.css";
+.main {
+  width: 20rem;
+  position: relative;
+  background: #eee;
+  padding-bottom: 2.13333333rem;
+}
+.main header a {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 3.33333333rem;
+  padding-top: 1.6rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  box-shadow: 0px 20px 20px #ddd;
+  text-align: left;
+  color: #fff;
+}
+.main header a img {
+  width: 1.30666667rem;
+  height: 0.82666667rem;
+  margin-left: 5%;
+  margin-right: 5.73333333rem;
+}
+.main header a i {
+  margin-left: 5.86666667rem;
+}
+.main .mainInfo {
+  width: 100%;
+  height: 19.86666667rem;
+  position: relative;
+  top: 3.33333333rem;
+}
+.main .mainInfo .cont {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.main .mainInfo .cont img {
+  width: 8.4rem;
+  height: 8.4rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.06666667rem;
+}
+.main .mainInfo .cont a {
+  position: absolute;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  top: 4.26666667rem;
+  left: 15.33333333rem;
+}
+.main .mainInfo .cont a:first-of-type {
+  background: #696969;
+  left: 1.46666667rem;
+}
+.main .mainInfo .cont a img {
+  width: 1.54666667rem;
+  height: 1.54666667rem;
+  margin-top: 0.82666667rem;
+}
+.main .mainInfo .info {
+  width: 100%;
+  text-align: center;
+}
+.main .mainInfo .info h4 {
+  font-size: 0.96rem;
+}
+.main .mainInfo .info p:first-of-type {
+  font-size: 0.69333333rem;
+  color: #969696;
+  margin-bottom: 0.4rem;
+}
+.main .mainInfo .info p:last-of-type {
+  font-size: 0.96rem;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+.main .mainInfo .info p i,
+.main .mainInfo .info p span {
+  font-size: 0.96rem;
+  color: #5C7DE9;
+}
+.main .mainInfo button {
+  width: 13.86666667rem;
+  height: 2.26666667rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  font-size: 0.96rem;
+  color: #fff;
+  margin-left: 3.06666667rem;
+  border: none;
+  border-radius: 50px;
+}
+.main .detail {
+  width: 17.86666667rem;
+  margin-top: 4rem;
+}
+.main .detail ul li {
+  width: 100%;
+  height: 3.33333333rem;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 1.06666667rem;
+  box-shadow: 0.21333333rem 0.26666667rem 0.21333333rem #B4B9CF;
+  margin-left: 1.06666667rem;
+  position: relative;
+}
+.main .detail ul li:last-of-type {
+  margin-bottom: 2.66666667rem;
+}
+.main .detail ul li img {
+  width: 2.21333333rem;
+  height: 1.28rem;
+  margin-top: 1.06666667rem;
+  margin-left: 0.93333333rem;
+  padding-right: 0.93333333rem;
+  border-right: 1px solid #ccc;
+}
+.main .detail ul li a {
+  position: absolute;
+  top: 1.06666667rem;
+  left: 4.53333333rem;
+  font-size: 0.90666667rem;
+  color: #969696;
+}
+.main .detail ul li i {
+  font-size: 1.86666667rem;
+  margin-left: 12.8rem;
+}
+/*# sourceMappingURL=docMain.css.map */

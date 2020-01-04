@@ -1,0 +1,122 @@
+@import "css/comm.css";
+.fn {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.title {
+  width: 18.13333333rem;
+  margin-left: 0.93333333rem;
+  color: #9d9d9d;
+  font-size: 0.74666667rem;
+  padding-bottom: 0.26666667rem;
+  border-bottom: 1px dashed #9d9d9d;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.53333333rem;
+}
+.main {
+  width: 20rem;
+}
+.main header {
+  width: 20rem;
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  background: linear-gradient(to right, #4B66EA, #82A0F6);
+  box-shadow: 0.21333333rem 0.53333333rem 0.21333333rem #B4B9CF;
+}
+.main header h4 {
+  font-size: 0.96rem;
+  color: #fff;
+  display: inline-block;
+  margin-left: 7.06666667rem;
+}
+.main header i {
+  color: #fff;
+  font-size: 1.06666667rem;
+  margin-left: 0.8rem;
+}
+.main .main_one {
+  width: 20rem;
+}
+.main .main_one h1 {
+  font-size: 1.6rem;
+  padding-left: 1.46666667rem;
+  color: #969696;
+  margin-top: 4rem;
+  margin-bottom: 3.2rem;
+}
+.main .main_one .serlist {
+  width: 8.8rem;
+  height: 7.2rem;
+  float: left;
+  margin-top: 2.53333333rem;
+  margin-left: 0.85333333rem;
+  margin-bottom: -0.8rem;
+  border-radius: 15px;
+  box-shadow: 0.21333333rem 0.53333333rem 0.26666667rem #B4B9CF;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.main .main_one .serlist:nth-of-type(1) {
+  background-image: url("../imgs/index/bg1.png");
+}
+.main .main_one .serlist:nth-of-type(2) {
+  background-image: url("../imgs/index/bg2.png");
+}
+.main .main_one .serlist:nth-of-type(2) img {
+  width: 1.86666667rem;
+}
+.main .main_one .serlist:nth-of-type(3) {
+  background-image: url("../imgs/index/bg2.png");
+}
+.main .main_one .serlist:nth-of-type(4) {
+  background-image: url("../imgs/index/bg2.png");
+  margin-bottom: 2.66666667rem;
+}
+.main .main_one .serlist img {
+  width: 1.33333333rem;
+  margin-top: 1.06666667rem;
+  margin-left: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+.main .main_one .serlist a {
+  color: #fff;
+  margin-left: 0.8rem;
+  font-size: 0.90666667rem;
+}
+.main .main_one .serlist span {
+  color: #B2B2B2;
+  margin-left: 0.8rem;
+  font-size: 0.69333333rem;
+}
+.main footer {
+  width: 20rem;
+  background: #F3F6FE;
+  opacity: 0.9;
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+.main footer a {
+  display: inline-block;
+  width: 2.13333333rem;
+  height: 2.13333333rem;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 1.2rem;
+  margin-top: 0.8rem;
+}
+.main footer a:nth-of-type(2) {
+  margin-right: 3.73333333rem;
+}
+.main footer a:nth-of-type(3) {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: #F3F6FE;
+  padding-top: 0.53333333rem;
+  position: absolute;
+  top: -1.73333333rem;
+  left: 6.93333333rem;
+}
+.main footer a img {
+  width: 70%;
+}
+/*# sourceMappingURL=listDrug.css.map */

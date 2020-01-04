@@ -1,0 +1,138 @@
+body{
+    background: transparent;
+}
+.container-fluid3{
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    padding-bottom: 80px;
+}
+.container-fluid3 h3{
+    font-size: 40px;
+    color: #028572;
+}
+
+/*巨幕*/
+.jumbotron{
+    background: transparent;
+    opacity: 0.6;
+}
+
+/*模态框*/
+.modal{
+    height: 600px;
+}
+.modal-dialog{
+    width: 100%;
+    height: 500px;
+}
+.modal-content{
+    width: 70%;
+    height: 500px;
+    margin: 0 auto;
+    background: #999;
+    opacity: 0.8;
+}
+/*轮播图*/
+.slide{
+    width: 100%;
+}
+/*缩略图*/
+.row .thumbnail{
+    text-align: center;
+}
+.dash1{
+    background: #F06F76;
+}
+.dash2{
+    background: #8E7EAD;
+}
+.dash3{
+    background: #16A085;
+}
+.dash4{
+    background: #3F4E62;
+}
+.row .thumbnail i{
+    margin-top: 10px;
+    font-size: 70px;
+    color: #fff;
+}
+.row .thumbnail h3{
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/*统计*/
+.show1{
+    width: 98%;
+    margin: 20px auto;
+    background: #8694A1;
+    opacity: 0.5;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+.show1 i{
+    font-size: 80px;
+    margin-top: 40px;
+}
+.show1 h4{
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+.show1 .left,
+.show1 .right{
+    width: 50%;
+    height: 230px;
+    float: left;
+}
+.show1 .left span,
+.show1 .right span{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20%;
+    width: 50%;
+    height: 180px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.show1 .left span{
+    color: #fff;
+    border: 4px solid #fff;
+}
+.show1 .right span{
+    right: 0px;
+    color: #000;
+    border: 4px solid #000;
+}
+.show1 .left p,
+.show1 .right p{
+    margin-top: 20px;
+    padding-left: 20%;
+    font-size: 20px;
+    color: #444;
+}
+.show1 ul li{
+    list-style: none;
+    text-align: left;
+    color: #fff;
+    height: 55px;
+    line-height: 55px;
+    margin-right: 10%;
+}
+.show1 ul li span{
+    display: inline-block;
+    width: 15%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 70%;
+    background: #5e5e5e;
+}
+.show1 ul li .progress{
+    height: 5px;
+}
+

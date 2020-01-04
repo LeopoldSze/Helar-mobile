@@ -1,0 +1,108 @@
+@import "css/comm.css";
+.main {
+  width: 750/37.5rem;
+  position: relative;
+  a{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 125/37.5rem;
+    padding-top: 60/37.5rem;
+    background: linear-gradient(to right, #4b66ea, #82a0f6);
+    box-shadow: 0px 20px 20px #ddd;
+    text-align: left;
+    color: #fff;
+    img{
+      width: 49/37.5rem;
+      height: 31/37.5rem;
+      margin-left: 5%;
+      margin-right: 215/37.5rem;
+    }
+  }
+  h4 {
+    font-size: 60/37.5rem;
+    color: #969696;
+    position: absolute;
+    top: 280/37.5rem;
+    width: 100%;
+    padding-left: 65/37.5rem;
+  }
+  ul{
+    position: absolute;
+    top: 565/37.5rem;
+    li{
+      width: 645/37.5rem;
+      height: 90/37.5rem;
+      line-height: 90/37.5rem;
+      margin-left: 55/37.5rem;
+      margin-bottom: 55/37.5rem;
+      padding-left: 40/37.5rem;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      color: #969696;
+      font-size: 30/37.5rem;
+      position: relative;
+      &:nth-of-type(3) img{
+        margin-left: 465/37.5rem;
+      }
+      &:nth-of-type(4) img{
+        margin-left: 465/37.5rem;
+      }
+      &:nth-of-type(4) .sel{
+        height: 140/37.5rem;
+      }
+      img{
+        margin-left: 400/37.5rem;
+        width: 36/37.5rem;
+        height: 19/37.5rem;
+      }
+      .sel{
+        width: 98%;
+        height: 340/37.5rem;
+        overflow-y: auto;
+        position: absolute;
+        top: 95/37.5rem;
+        left: 1%;
+        display: none;
+        background: #333333;
+        opacity: 0.8;
+        span{
+          display: block;
+          width: 100%;
+          height: 70/37.5rem;
+          line-height: 70/37.5rem;
+          text-align: center;
+          border-top: 1px dotted #ccc;
+          border-bottom: 1px dotted #ccc;
+          border-left: 1px dotted #ccc;
+          border-right: 1px dotted #ccc;
+          &:first-of-type{
+            border-top: 1px dotted #ccc;
+          }
+          &:hover{
+            background: #ddd;
+            color: #333333;
+          }
+        }
+        &.on{
+          display: block;
+          z-index: 2;
+        }
+      }
+    }
+  }
+  #btn{
+    width: 645/37.5rem;
+    height: 90/37.5rem;
+    background: linear-gradient(to right, #4b66ea, #82a0f6);
+    color: #fff;
+    font-size: 36/37.5rem;
+    position: absolute;
+    top: 1190/37.5rem;
+    left: 55/37.5rem;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 100/37.5rem;
+  }
+}

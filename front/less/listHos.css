@@ -1,0 +1,116 @@
+@import "css/comm.css";
+.fn {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.main {
+  width: 20rem;
+  position: relative;
+  background: #eee;
+}
+.main header {
+  width: 20rem;
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  background: linear-gradient(to right, #4B66EA, #82A0F6);
+  box-shadow: 0.21333333rem 0.53333333rem 0.21333333rem #B4B9CF;
+}
+.main header h4 {
+  font-size: 0.96rem;
+  color: #fff;
+  display: inline-block;
+  margin-left: 7.06666667rem;
+}
+.main header i {
+  color: #fff;
+  font-size: 1.06666667rem;
+  margin-left: 0.8rem;
+}
+.main header i:last-of-type {
+  margin-left: 6.93333333rem;
+}
+.main .hosInfo {
+  width: 20rem;
+  background: #F1F1F1;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+}
+.main .hosInfo .recList {
+  width: 100%;
+}
+.main .hosInfo .recList li {
+  width: 18.13333333rem;
+  height: 5.33333333rem;
+  margin-left: 0.93333333rem;
+  background: #fff;
+  border-radius: 20px;
+  margin-top: 1.06666667rem;
+}
+.main .hosInfo .recList li img {
+  float: left;
+  width: 3.73333333rem;
+  height: 3.73333333rem;
+  margin-left: 0.93333333rem;
+  margin-top: 0.8rem;
+  margin-right: 0.8rem;
+}
+.main .hosInfo .recList li .info {
+  width: 12.26666667rem;
+  float: left;
+  position: relative;
+}
+.main .hosInfo .recList li .info h4 {
+  font-size: 0.90666667rem;
+  margin-top: 1.14666667rem;
+  margin-bottom: 0.66666667rem;
+}
+.main .hosInfo .recList li .info p {
+  font-size: 0.66666667rem;
+  color: #a1a1a1;
+}
+.main .hosInfo .recList li .info .score {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.93333333rem;
+  font-size: 0.96rem;
+  color: #546fec;
+}
+.main .hosInfo .recList li .info .score + i {
+  position: absolute;
+  right: 0.8rem;
+  top: 3.06666667rem;
+  font-size: 1.06666667rem;
+  color: #546fec;
+}
+.main footer {
+  width: 20rem;
+  background: #F3F6FE;
+  opacity: 0.9;
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+.main footer a {
+  display: inline-block;
+  width: 2.13333333rem;
+  height: 2.13333333rem;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 1.2rem;
+  margin-top: 0.8rem;
+}
+.main footer a:nth-of-type(2) {
+  margin-right: 3.73333333rem;
+}
+.main footer a:nth-of-type(3) {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: #F3F6FE;
+  padding-top: 0.53333333rem;
+  position: absolute;
+  top: -1.73333333rem;
+  left: 6.93333333rem;
+}
+.main footer a img {
+  width: 70%;
+}
+/*# sourceMappingURL=listHos.css.map */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../layer-v3.1.1/layer/layer.js"></script>
+    <link rel="stylesheet" href="../less/profileSet.css">
+    <title>信息修改</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href="profile.html">
+                <img src="../imgs/index2/backbutton.png" alt="" id="back">信息修改
+            </a>
+        </header>
+        <div class="infoEdit">
+            <p>账号<input type="text" id="uacc"></p>
+            <p>密码<input type="text" id="upass"></p>
+            <p>头像<input type="text" id="uphoto"></p>
+            <p>年龄<input type="text" id="uage"></p>
+            <p>血型<input type="text" id="ublood"></p>
+            <p>性别<input type="text" id="ugender"></p>
+            <p>身高<input type="text" id="uheight"></p>
+            <p>体重<input type="text" id="uweight"></p>
+            <p>邮箱<input type="text" id="umail"></p>
+            <p><button type="button" id="btn">提交修改</button></p>
+        </div>
+    </div>
+</body>
+<script>
+    let usr = {};
+    $("#btn").click(()=>{
+        let info = JSON.parse(sessionStorage.getItem("userinfo"));
+        usr.acc = $("#uacc").val();
+        usr.pass = $("#upass").val();
+        usr.photo = $("#uphoto").val();
+        usr.age = $("#uage").val();
+        usr.blood = $("#ublood").val();
+        usr.gender = $("#ugender").val();
+        usr.height = $("#uheight").val();
+        usr.weight = $("#uweight").val();
+        usr.mail = $("#umail").val();
+        if(usr.acc===null || usr.acc==="" || usr.pass===null || usr.pass===""
+            || usr.photo===null || usr.photo==="" || usr.age===null || usr.age===""
+        || usr.blood===null || usr.blood==="" || usr.gender===null || usr.gender===""
+        || usr.height===null || usr.height==="" || usr.weight===null || usr.weight===""
+        || usr.mail===null || usr.mail===""){
+            layer.msg("请填写完整信息！",()=>{});
+            return;
+        }else{
+            $.ajax({
+                type:"get",
+                url:"http://localhost:3000/users/id?acc="+info.acc,
+                async:true,
+                success:function(data){
+                    usr.id = JSON.stringify(data.data[0].id);
+                    $.ajax({
+                        type: "post",
+                        url: "http://localhost:3000/users/upd",
+                        data: usr,
+                        async: true,
+                        success: function (data1) {
+                            console.log(data1);
+                            if (data1.errorNo === -1) {
+                                layer.msg('修改失败，请重试！', ()=>{});
+                                return false;
+                            } else {
+                                layer.msg('修改成功');
+                                setTimeout(()=>{
+                                    window.location = "profile.html";
+                                },1000);
+                                //存入本地缓存,然后跳转到主页
+                                window.sessionStorage.setItem("userinfo", JSON.stringify(usr));
+                            }
+                        }
+                    });
+                }
+            });
+
+        }
+    });
+
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <script src="../layer-v3.1.1/layer/layer.js"></script>
+    <link rel="stylesheet" href="../less/drugDetail.css">
+    <title>阿莫西林</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href="drugShop.html"><img src="../imgs/index2/backbutton.png" alt="" id="back">药品<i class="fa fa-shopping-bag"></i></a>
+        </header>
+        <div class="info"></div>
+        <!--新建模板-->
+        <script id="docList" type="text/x-jquery-tmpl">
+            <img src="${photo}" alt=""/>
+            <h4>${name}</h4>
+            <p>￥${price}</p>
+            <ul>
+                <li>
+                    <h4>它是什么？</h4>
+                    <p>${descp}</p>
+                </li>
+                <li>
+                    <h4>服用方法</h4>
+                    <p>${methods}</p>
+                </li>
+            </ul>
+        </script>
+        <button type="button" id="btn">马上购买</button>
+    </div>
+</body>
+<script>
+    // 加载信息
+    $(function () {
+        let id = $.cookie('id');
+        $.ajax({
+            type:"get",
+            url:"http://localhost:3000/drug/id?id="+id,
+            async:true,
+            success:function(data){
+                console.log("data"+JSON.stringify(data));
+                $("#docList").tmpl(data.data).appendTo(".info");
+            }
+        });
+    });
+
+    // 马上购买
+    $("#btn").click(()=>{
+        layer.msg('加入购物车成功！');
+    });
+</script>
+</html>

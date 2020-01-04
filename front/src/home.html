@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <link rel="stylesheet" href="../less/menu.css">
+    <link rel="stylesheet" href="../less/home.css">
+    <title>主页</title>
+</head>
+<body>
+    <div class="main">
+        <!--头部-->
+        <header>
+            <i class="fa fa-bars js-slideout-toggle" id="menu"></i>
+            <img src="../imgs/index/logo.png" alt="">
+            <i class="fa fa-envelope-o"></i>
+            <i class="fa fa-bell-o"></i>
+        </header>
+
+        <!--侧边栏-->
+        <div class="menu">
+            <div class="userArea"></div>
+            <!--新建模板-->
+            <script id="usrInfo" type="text/x-jquery-tmpl">
+                <img src="${photo}" alt=""/>
+                <h4>${acc}</h4>
+            </script>
+            <ul>
+                <li><a href="home.html">首页</a></li>
+                <li><a href="listDrug.html">药物</a></li>
+                <li><a href="listDoc.html">医生</a></li>
+                <li><a href="services.html">服务</a></li>
+                <li><a href="profile.html">个人中心</a></li>
+                <li><a href="newsDetail.html">健康资讯</a></li>
+                <li><a href="javascript:;" id="exit">退出登录</a></li>
+            </ul>
+        </div>
+
+        <!--轮播图-->
+        <h3 id="tit">H❤aler</h3>
+        <canvas id="canvas" style="background:#999"></canvas>
+
+        <!--主体1-->
+        <div class="main_one clearFix">
+            <h1>欢迎您，</h1>
+            <h1>我们能为您提供的服务:</h1>
+            <div class="serlist">
+                <img src="../imgs/index/doc.png" alt="">
+                <br>
+                <a href="doctor.html">找医生</a>
+                <br>
+                <span>113医生</span>
+            </div>
+            <div class="serlist">
+                <img src="../imgs/index/hos.png" alt="">
+                <br>
+                <a href="hospital.html">找医院</a>
+                <br>
+                <span>269医院</span>
+            </div>
+            <div class="serlist">
+                <img src="../imgs/index/res.png" alt="">
+                <br>
+                <a href="appointment.html">预约挂号</a>
+                <br>
+                <span>59可预约</span>
+            </div>
+            <div class="serlist">
+                <img src="../imgs/index/fee.png" alt="">
+                <br>
+                <a href="services.html">收费服务</a>
+                <br>
+                <span>26项服务</span>
+            </div>
+        </div>
+
+        <!--主体2-->
+        <div class="title">
+            <h4>为您推荐</h4>
+        </div>
+        <div class="main_two clearFix">
+            <ul class="recList clearFix" id="recList"></ul>
+            <!--新建模板-->
+            <script id="docList" type="text/x-jquery-tmpl">
+                <li class="docList">
+                    <img src="${photo}" alt=""/>
+                    <div class="info">
+                        <input type="hidden" id="${id}" class="num">
+                        <h4>${name}</h4>
+                        <p>${kind}</p>
+                        <p><i class="fa fa-map-marker"></i>&nbsp;<span>0.8km</span></p>
+                        <span class="score"><i class="fa fa-star-o"></i>&nbsp;${score}</span>
+                        <i class="fa fa-ellipsis-v"></i>
+                    </div>
+                </li>
+            </script>
+        </div>
+
+        <!--主体3-->
+        <div class="title">
+            <h4>健康资讯</h4>
+        </div>
+        <div class="main_three clearFix">
+            <div class="news">
+                <img src="../imgs/index/heal1.png" alt="">
+                <h4>养胃+减肥的一日三餐</h4>
+                <p>一日三餐食谱，简单的材料和过程，达到最快减肥效果的具体计划</p>
+            </div>
+            <div class="news">
+                <img src="../imgs/index/heal2.png" alt="">
+                <h4>养胃+减肥的一日三餐</h4>
+                <p>一日三餐食谱，简单的材料和过程，达到最快减肥效果的具体计划</p>
+            </div>
+            <div class="news">
+                <img src="../imgs/index/heal1.png" alt="">
+                <h4>养胃+减肥的一日三餐</h4>
+                <p>一日三餐食谱，简单的材料和过程，达到最快减肥效果的具体计划</p>
+            </div>
+        </div>
+
+        <!--底部-->
+        <footer>
+            <a href="listDrug.html"><img src="../imgs/index/drugs.png" alt=""></a>
+            <a href="listDoc.html"><img src="../imgs/index/doctor.png" alt=""></a>
+            <a href="home.html"><img src="../imgs/index/stethoscope.png" alt=""></a>
+            <a href="listHos.html"><img src="../imgs/index/Shape.png" alt=""></a>
+            <a href="profile.html"><img src="../imgs/index/profile.png" alt=""></a>
+        </footer>
+    </div>
+</body>
+<script src="../js/home.js"></script>
+<script src="../js/menu.js"></script>
+</html>

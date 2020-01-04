@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <link rel="stylesheet" href="../less/menu.css">
+    <link rel="stylesheet" href="../less/listHos.css">
+    <title>医院</title>
+</head>
+<body>
+    <div class="main">
+        <!--顶部-->
+        <header>
+            <i class="fa fa-bars" id="menu"></i>
+            <h4>医院</h4>
+            <i class="fa fa-search" id="search"></i>
+        </header>
+
+        <!--侧边栏-->
+        <div class="menu">
+            <div class="userArea"></div>
+            <!--新建模板-->
+            <script id="usrInfo" type="text/x-jquery-tmpl">
+                <img src="${photo}" alt=""/>
+                <h4>${acc}</h4>
+            </script>
+            <ul>
+                <li><a href="home.html">首页</a></li>
+                <li><a href="listDrug.html">药物</a></li>
+                <li><a href="listDoc.html">医生</a></li>
+                <li><a href="services.html">服务</a></li>
+                <li><a href="profile.html">个人中心</a></li>
+                <li><a href="newsDetail.html">健康资讯</a></li>
+                <li><a href="javascript:;" id="exit">退出登录</a></li>
+            </ul>
+        </div>
+
+        <!--主体-->
+        <div class="hosInfo">
+            <ul class="recList clearFix"></ul>
+            <!--新建模板-->
+            <script id="docList" type="text/x-jquery-tmpl">
+				<li>
+                    <img src="${photo}" alt="" />
+                    <div class="info">
+                        <h4>${name}</h4>
+                        <p>${kind}</p>
+                        <p><i class="fa fa-map-marker"></i>&nbsp;<span>0.8km</span></p>
+                        <span class="score"><i class="fa fa-star-o"></i>&nbsp;${score}</span>
+                        <i class="fa fa-ellipsis-v"></i>
+                    </div>
+                </li>
+			</script>
+        </div>
+
+        <!--底部-->
+        <footer>
+            <a href="listDrug.html"><img src="../imgs/index/drugs.png" alt=""></a>
+            <a href="listDoc.html"><img src="../imgs/index/doctor.png" alt=""></a>
+            <a href="home.html"><img src="../imgs/index/stethoscope.png" alt=""></a>
+            <a href="listHos.html"><img src="../imgs/index2/f3.png" alt=""></a>
+            <a href="profile.html"><img src="../imgs/index/profile.png" alt=""></a>
+        </footer>
+    </div>
+</body>
+<script src="../js/menu.js"></script>
+<script src="../js/listHos.js"></script>
+</html>

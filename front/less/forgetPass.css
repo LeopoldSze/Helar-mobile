@@ -1,0 +1,68 @@
+@import "css/comm.css";
+.main {
+  width: 20rem;
+  position: relative;
+}
+.main a {
+  position: absolute;
+  top: 0.66666667rem;
+  left: 5%;
+  width: 90%;
+  height: 0.82666667rem;
+  padding-bottom: 1.6rem;
+  box-shadow: 0px 20px 20px #ddd;
+}
+.main a img {
+  width: 1.30666667rem;
+  height: 0.82666667rem;
+}
+.main .info {
+  width: 80%;
+  height: 4.53333333rem;
+  position: absolute;
+  top: 6.4rem;
+  left: 10%;
+  text-align: center;
+}
+.main .info h4 {
+  font-size: 1.01333333rem;
+  margin-bottom: 1.33333333rem;
+}
+.main .info p {
+  font-size: 0.8rem;
+  color: #696969;
+}
+.main .icos {
+  width: 1.12rem;
+  height: 0.85333333rem;
+  position: absolute;
+  top: 14.93333333rem;
+  left: 2.58666667rem;
+  z-index: 9;
+}
+.main input {
+  width: 16.8rem;
+  height: 2.4rem;
+  border: 1px solid #999;
+  border-radius: 1.33333333rem;
+  margin-bottom: 1.33333333rem;
+  padding-left: 2.53333333rem;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 14.16rem;
+  left: 1.6rem;
+}
+.main button {
+  width: 16.8rem;
+  height: 2.4rem;
+  border: none;
+  border-radius: 1.33333333rem;
+  font-size: 0.96rem;
+  color: #fff;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  position: absolute;
+  top: 18rem;
+  left: 1.6rem;
+  margin-bottom: 2.66666667rem;
+}
+/*# sourceMappingURL=forgetPass.css.map */

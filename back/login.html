@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/jquery.tmpl.js"></script>
+    <script src="./js/ajax_promise.js"></script>
+    <title>登录</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <form class="form-horizontal col-md-4 col-md-offset-4">
+            <h3>欢迎登录Movie Pro后台系统</h3>
+            <div class="form-group">
+                <label for="u_name" class="col-sm-2 control-label">账号</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="u_name" placeholder="请输入账号：">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="u_pass" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" id="u_pass" placeholder="请输入密码：">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary" id="login">登录</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/login.js"></script>
+</html>

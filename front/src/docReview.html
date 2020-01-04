@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../less/docReview.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/jquery.tmpl.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../less/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="../js/scale.js"></script>
+    <title>评价</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href="docMain.html"><img src="../imgs/index2/backbutton.png" alt="" id="back">评价</a>
+        </header>
+        <div class="reviews">
+            <ul id="reviewList"></ul>
+            <!--新建模板-->
+            <script id="review" type="text/x-jquery-tmpl">
+                <li>
+                    <div class="info">
+                        <img src="${photo}" alt="">
+                        <h3>${nickname}
+                            <span>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </span>
+                        </h3>
+                    </div>
+                    <p>${review}</p>
+                </li>
+            </script>
+        </div>
+        <button type="button" id="submi">发表评论</button>
+    </div>
+</body>
+<script>
+    // 加载信息
+    $(function () {
+        let id = $.cookie('num');
+        // 搜索医生
+        $.ajax({
+            type: "get",
+            url: "http://localhost:3000/review/list?id="+id,
+            async: true,
+            success: function (data) {
+                console.log("doc" + JSON.stringify(data.data));
+                if (data.data) {
+                    $("#review").tmpl(data.data).appendTo("#reviewList");
+                }
+            }
+        });
+    });
+</script>
+</html>

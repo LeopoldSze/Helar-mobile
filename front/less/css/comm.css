@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+*{
+    margin: 0rem;
+    padding: 0rem;
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+input,select{
+    outline: none;
+}
+.clearFix:after{
+    content: "";
+    display: block;
+    clear: both;
+}

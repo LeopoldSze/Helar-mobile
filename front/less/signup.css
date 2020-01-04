@@ -1,0 +1,85 @@
+@import "css/comm.css";
+.main {
+  width: 20rem;
+  position: relative;
+}
+.main img {
+  width: 8rem;
+  position: absolute;
+  top: -2.66666667rem;
+  left: 6.13333333rem;
+}
+.main h2 {
+  font-size: 1.73333333rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 6.53333333rem;
+  margin-bottom: 4.4rem;
+}
+.main .login {
+  margin-left: 1.46666667rem;
+  margin-right: 1.46666667rem;
+  margin-bottom: 0.8rem;
+}
+.main .login .icos {
+  height: 1.17333333rem;
+  position: absolute;
+  left: 2.4rem;
+  z-index: 9;
+}
+.main .login .icos:first-of-type {
+  width: 1.01333333rem;
+  top: 7.2rem;
+}
+.main .login .icos:nth-of-type(2) {
+  width: 0.88rem;
+  top: 10.93333333rem;
+}
+.main .login .icos:nth-of-type(3) {
+  width: 0.88rem;
+  top: 14.66666667rem;
+}
+.main .login .icos:nth-of-type(4) {
+  width: 1.12rem;
+  height: 0.85333333rem;
+  top: 18.66666667rem;
+}
+.main .login input {
+  width: 100%;
+  height: 2.4rem;
+  border: 1px solid #999;
+  border-radius: 1.33333333rem;
+  margin-bottom: 1.33333333rem;
+  padding-left: 2.53333333rem;
+  font-size: 0.8rem;
+  position: relative;
+}
+.main .login button {
+  width: 100%;
+  height: 2.4rem;
+  border: none;
+  font-size: 0.96rem;
+  color: #fff;
+  border-radius: 1.33333333rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  margin-top: 1.86666667rem;
+  box-shadow: 2px 10px 8px #B4B9CF;
+}
+.main p {
+  width: 100%;
+  height: 1.33333333rem;
+  text-align: center;
+  margin-bottom: 1.06666667rem;
+}
+.main p span {
+  font-size: 0.69333333rem;
+  color: #989898;
+}
+.main p a {
+  font-size: 0.69333333rem;
+  color: #4f69eb;
+}
+.main p a:hover {
+  font-size: 0.93333333rem;
+}
+/*# sourceMappingURL=signup.css.map */

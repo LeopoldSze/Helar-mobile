@@ -1,0 +1,54 @@
+@import "css/comm.css";
+.main {
+  width: 20rem;
+  position: relative;
+  background: #eee;
+  padding-bottom: 2.13333333rem;
+}
+.main header a {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 3.33333333rem;
+  padding-top: 1.6rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+  box-shadow: 0px 20px 20px #ddd;
+  text-align: left;
+  color: #fff;
+}
+.main header a img {
+  width: 1.30666667rem;
+  height: 0.82666667rem;
+  margin-left: 5%;
+  margin-right: 5.73333333rem;
+}
+.main header a i {
+  margin-left: 5.86666667rem;
+}
+.main .info {
+  width: 100%;
+  position: relative;
+  top: 3.33333333rem;
+}
+.main .info ul {
+  width: 18.66666667rem;
+  margin-left: 0.66666667rem;
+  padding-top: 1.33333333rem;
+  padding-bottom: 2.13333333rem;
+}
+.main .info ul li {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.06666667rem;
+}
+.main .info ul li h3 {
+  font-size: 0.96rem;
+}
+.main .info ul li p {
+  font-size: 0.85333333rem;
+  color: #969696;
+}
+/*# sourceMappingURL=docInfo.css.map */

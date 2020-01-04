@@ -1,0 +1,209 @@
+@import "css/comm.css";
+.walk{
+  width: 750/37.5rem;
+  position: absolute;
+}
+.stopAnimaion{
+  animation-fill-mode: forwards;          // 停在最后一帧
+}
+
+// 引导页1
+.walk_one{
+  .walk;
+  height: 1300/37.5rem;
+  img{
+    width: 404/37.5rem;
+    height: 100/37.5rem;
+    position: absolute;
+    top: 615/37.5rem;
+    left: 175/37.5rem;
+    transform-origin: center center;
+    animation: 2s rots infinite;
+    z-index: 5;
+  }
+  canvas{
+    width: 750/37.5rem;
+    height: 1400/37.5rem;
+  }
+}
+
+// 引导页2,引导页3,引导页4
+.walk_two,.walk_three,.walk_four{
+  .walk;
+  height: 1400/37.5rem;
+  img{
+    width: 304/37.5rem;
+    height: 410/37.5rem;
+    position: absolute;
+    top: 205/37.5rem;
+    left: 220/37.5rem;
+  }
+  .info{
+    width: 100%;
+    height: 170/37.5rem;
+    position: absolute;
+    top: 780/37.5rem;
+    text-align: center;
+    h4{
+      font-size: 36/37.5rem;
+      margin-bottom: 45/37.5rem;
+    }
+    p{
+      font-size: 30/37.5rem;
+      color: #696969;
+    }
+  }
+  .sign{
+    width: 100%;
+    height: 120/37.5rem;
+    position: absolute;
+    top: 1175/37.5rem;
+    span{
+      display: inline-block;
+      width: 50/37.5rem;
+      height: 12/37.5rem;
+      background: #969696;
+      margin-right: 22/37.5rem;
+      border-radius: 20px;
+      &:first-of-type{
+        margin-left: 280/37.5rem;
+      }
+      &.on{
+        background: linear-gradient(to right,#4B66EA, #82A0F6);
+      }
+    }
+    a{
+      position: absolute;
+      width: 120/37.5rem;
+      height: 120/37.5rem;
+      line-height: 120/37.5rem;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 80/37.5rem;
+      top: -20/37.5rem;
+      left: 0rem;
+      background: linear-gradient(to right,#4B66EA, #82A0F6);
+      opacity: 0;
+      transform: translateX(0rem);
+      animation: 2s moveRight 1s;
+      .stopAnimaion;
+    }
+  }
+}
+
+// 引导页2
+.walk_two{
+  display: none;
+}
+
+// 引导页3
+.walk_three{
+  display: none;
+  img{
+    width: 405/37.5rem;
+  }
+  .sign{
+    a{
+      position: absolute;
+      top: -20/37.5rem;
+      &:first-of-type{
+        background: #fff;
+        color: #696969;
+        left: 40/37.5rem;
+        border: 1px solid #696969;
+        opacity: 0;
+        transform: translateX(750/37.5rem);
+        animation: 2s moveLeft 1s;
+        .stopAnimaion;
+      }
+      &:last-of-type{
+        animation: 2s moveRight 1s;
+        .stopAnimaion;
+      }
+    }
+  }
+}
+
+// 引导页4
+.walk_four{
+  display: none;
+  img{
+    width: 310/37.5rem;
+  }
+  input{
+    width: 640/37.5rem;
+    height: 90/37.5rem;
+    border: none;
+    color: #fff;
+    font-size: 36/37.5rem;
+    border-radius: 50/37.5rem;
+    background: linear-gradient(to right,#4B66EA, #82A0F6);
+    position: absolute;
+    top: 1190/37.5rem;
+    left: 55/37.5rem;
+    opacity: 0;
+    transform: scale(0);
+    animation: 1s showBtn 1s;
+    .stopAnimaion;
+  }
+}
+
+
+// 切换
+.show{
+  display: block;
+}
+
+.swiper-container{
+  .walk;
+}
+
+// 背景渐变动画
+@keyframes slowChange {
+  0%{
+    background: linear-gradient(to bottom,#fff,#E3E9FD);
+  }
+  33%{
+    background: linear-gradient(to bottom,#E3E9FD,#2aabd2);
+  }
+  66%{
+    background: linear-gradient(to bottom,#2aabd2,#E3E9FD);
+  }
+  100%{
+    background: linear-gradient(to bottom,#E3E9FD,#fff);
+  }
+}
+// 旋转动画
+@keyframes rots {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+// 右移动画
+@keyframes moveRight {
+  100%{
+    opacity: 1;
+    transform: translateX(590/37.5rem);
+  }
+}
+// 左移动画
+@keyframes moveLeft {
+  100%{
+    opacity: 1;
+    transform: translateX(40/37.5rem);
+  }
+}
+// 按钮显示
+@keyframes showBtn {
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,27 @@
+@import "css/comm.css";
+.fn {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.main {
+  width: 20rem;
+}
+.main header {
+  width: 100%;
+  height: 3.33333333rem;
+  background: linear-gradient(to right, #4b66ea, #82a0f6);
+}
+.main header a {
+  color: #fff;
+  font-size: 0.96rem;
+}
+.main header a img {
+  width: 1.30666667rem;
+  height: 0.82666667rem;
+  margin-left: 0.85333333rem;
+  margin-top: 1.73333333rem;
+}
+.main .info {
+  width: 100%;
+}
+/*# sourceMappingURL=docApo.css.map */
